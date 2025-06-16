@@ -1,5 +1,6 @@
 package qa.guru.owner.config;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,7 +15,7 @@ public class WebDriverProvider implements Supplier<WebDriver> {
     private WebDriverConfig config;
 
     public WebDriverProvider(){
-        config = new WebDriverConfig();
+        config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
     }
 
     @Override

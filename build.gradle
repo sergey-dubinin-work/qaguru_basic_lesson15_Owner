@@ -3,7 +3,8 @@ plugins{
 }
 
 def jUnitVersion = '5.11.1',
-    seleniumVersion = '4.33.0'
+    seleniumVersion = '4.33.0',
+    ownerVersion = '1.0.4'
 
 repositories {
     mavenCentral()
@@ -12,7 +13,8 @@ repositories {
 dependencies {
     testImplementation(
             "org.junit.jupiter:junit-jupiter-api:$jUnitVersion",
-            "org.seleniumhq.selenium:selenium-java:$seleniumVersion"
+            "org.seleniumhq.selenium:selenium-java:$seleniumVersion",
+            "org.aeonbits.owner:owner:$ownerVersion"
     )
     testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:$jUnitVersion"
