@@ -5,7 +5,8 @@ plugins{
 def jUnitVersion = '5.11.1',
     seleniumVersion = '4.33.0',
     ownerVersion = '1.0.4',
-    assertJVersion = '4.0.0-M1'
+    assertJVersion = '4.0.0-M1',
+    log4JVersion = '2.24.3'
 
 repositories {
     mavenCentral()
@@ -17,7 +18,8 @@ dependencies {
             "org.seleniumhq.selenium:selenium-java:$seleniumVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
             "org.assertj:assertj-core:$assertJVersion",
-            "org.slf4j:slf4j-simple:2.0.17",
+            "org.apache.logging.log4j:log4j-core:$log4JVersion",
+            "org.apache.logging.log4j:log4j-api:$log4JVersion"
     )
     testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:$jUnitVersion"
